@@ -46,33 +46,4 @@
         <dependency><groupId>com.mstrsdk.mstr</groupId><artifactId>WebXMLUtils</artifactId><version>10.4</version><scope>provided</scope></dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>ZipComponent</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <version>3.1.1</version>
-                        <configuration>
-                            <finalName>${project.artifactId}</finalName>
-                            <descriptors>
-                                <descriptor>assembly/pack.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>trigger-assembly</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
 </project>
